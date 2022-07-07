@@ -16,6 +16,7 @@ In this project I utilized
 - Webpack
 
 ## Deployment
+
 [Live view](https://stephnna.github.io/to-do-list/)
 
 ## Getting Started
