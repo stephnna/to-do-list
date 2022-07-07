@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 16px;
+}
+
+.arrow::after {
+  content: "\21A9";
+  cursor: pointer;
+}
+
+.refresh::after {
+  content: "\01F5D8";
+  cursor: pointer;
+}
+
+.input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 98%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+.three-dots::after {
+  content: '\2807';
+  cursor: all-scroll;
+}
+
+.input::placeholder {
+  font-style: italic;
+}
+
+form,
+.to-do-container,
+.to-do-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clear-all {
+  text-align: center;
+  background-color: #e8e8e8;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  cursor: pointer;
+}
