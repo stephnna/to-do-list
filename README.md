@@ -17,7 +17,7 @@ In this project I utilized
 
 ## Deployment
 
-[Live view](https://stephnna.github.io/to-do-list/)
+[Live view](https://stephnna.github.io/to-do-list/dist/)
 
 ## Getting Started
 
