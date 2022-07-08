@@ -16,7 +16,8 @@ body {
   cursor: pointer;
 }
 
-.input {
+.input,
+.description {
   margin: 0;
   border: none;
   border-radius: 0;
