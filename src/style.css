@@ -16,7 +16,8 @@ body {
   cursor: pointer;
 }
 
-.input {
+.input,
+.description {
   margin: 0;
   border: none;
   border-radius: 0;
@@ -49,4 +50,8 @@ form,
   padding-top: 16px;
   padding-bottom: 16px;
   cursor: pointer;
+}
+
+.trash::after {
+  content: '\1F5D1';
 }
