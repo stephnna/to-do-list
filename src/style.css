@@ -51,7 +51,3 @@ form,
   padding-bottom: 16px;
   cursor: pointer;
 }
-
-.trash::after {
-  content: '\1F5D1';
-}
