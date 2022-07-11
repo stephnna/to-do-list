@@ -4,6 +4,7 @@ export default class TodosClass {
     this.toDos = [];
     this.myToDos = document.getElementById('to-dos');
     this.button = document.getElementById('add-arrow');
+    this.clearCompleted = document.getElementById('clear-completed');
   }
 
   // display todos
@@ -13,7 +14,7 @@ displayList = (todo) => {
     arrayItem.index = indexNum;
     // the above line of code increses the value of each index of the array of oject
     const toDoContent = `<div class="to-do-container">     
-      <input type="checkbox">
+      <input type="checkbox" class="completed">
       <div id="lab${indexNum}" class="description">${arrayItem.description}</div>     
       <div class="three-dots" id="${indexNum}"></div>      
     </div><hr>`;
@@ -53,6 +54,42 @@ addOnClick() {
     this.getLocalStorageData();
     window.location.reload();
   };
+}
+
+//  clear completed task
+clearAllCompleted = () => {
+  const data = JSON.parse(localStorage.getItem('bookdata'));
+  this.clearCompleted.addEventListener('click', () => {
+    const filtered = data.filter((ele) => ele.completed === false);
+    localStorage.setItem('bookdata', JSON.stringify(filtered));
+    this.getLocalStorageData();
+    window.location.reload();
+  });
+}
+
+completedTask = () => {
+  const completed = document.querySelectorAll('.completed');
+  const data = JSON.parse(localStorage.getItem('bookdata'));
+  completed.forEach((item, index) => {
+    if (data != null) {
+      if (data[index].completed === true) {
+        item.checked = true;
+      }
+    }
+    item.addEventListener('change', () => {
+      if (data != null) {
+        if (item.checked === true) {
+          data[index].completed = true;
+          localStorage.setItem('bookdata', JSON.stringify(data));
+        } else if (item.checked === false) {
+          data[index].completed = false;
+          item.checked = false;
+          localStorage.setItem('bookdata', JSON.stringify(data));
+        }
+        this.clearAllCompleted();
+      }
+    });
+  });
 }
 
 // edit task description

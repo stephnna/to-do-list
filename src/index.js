@@ -7,3 +7,4 @@ newTodos.getList();
 newTodos.addOnClick();
 newTodos.editTask();
 newTodos.deleteList();
+newTodos.completedTask();
