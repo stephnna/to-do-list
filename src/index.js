@@ -8,3 +8,4 @@ newTodos.addOnClick();
 newTodos.editTask();
 newTodos.deleteList();
 newTodos.completedTask();
+newTodos.clearAllCompleted();
