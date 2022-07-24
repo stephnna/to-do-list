@@ -74,16 +74,19 @@ completedTask = () => {
     if (data != null) {
       if (data[index].completed === true) {
         item.checked = true;
+        document.getElementById(`lab${index}`).className = 'cancel';
       }
     }
     item.addEventListener('change', () => {
       if (data != null) {
         if (item.checked === true) {
           data[index].completed = true;
+          document.getElementById(`lab${index}`).className = 'cancel';
           localStorage.setItem('todos', JSON.stringify(data));
         } else if (item.checked === false) {
           data[index].completed = false;
           item.checked = false;
+          document.getElementById(`lab${index}`).className = 'hide';
           localStorage.setItem('todos', JSON.stringify(data));
         }
         this.clearAllCompleted();

@@ -3,7 +3,10 @@
 }
 
 body {
+  font-family: cursive, Geneva, Tahoma, sans-serif;
+  text-align: center;
   padding: 0 16px;
+  background-color: #f5eec2;
 }
 
 .arrow::after {
@@ -45,9 +48,17 @@ form,
 }
 
 .clear-all {
-  text-align: center;
   background-color: #e8e8e8;
   padding-top: 16px;
   padding-bottom: 16px;
   cursor: pointer;
+}
+
+.cancel {
+  text-decoration: line-through;
+  color: green;
+}
+
+.hide {
+  text-decoration: none;
 }
