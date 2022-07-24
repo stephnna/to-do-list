@@ -71,17 +71,16 @@ completedTask = () => {
   const completed = document.querySelectorAll('.completed');
   const data = JSON.parse(localStorage.getItem('todos'));
   completed.forEach((item, index) => {
-    
     if (data != null) {
       if (data[index].completed === true) {
         item.checked = true;
-        document.getElementById(`lab${index}`).className = 'cancel'; 
+        document.getElementById(`lab${index}`).className = 'cancel';
       }
     }
     item.addEventListener('change', () => {
       if (data != null) {
         if (item.checked === true) {
-          data[index].completed = true;          
+          data[index].completed = true;
           document.getElementById(`lab${index}`).className = 'cancel';
           localStorage.setItem('todos', JSON.stringify(data));
         } else if (item.checked === false) {
